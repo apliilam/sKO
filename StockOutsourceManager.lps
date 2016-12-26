@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="StockOutsourceManager.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="168"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="som_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="som_mForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="70" Y="785"/>
+        <UsageCount Value="168"/>
+        <Bookmarks Count="4">
+          <Item0 Y="752" ID="3"/>
+          <Item1 X="15" Y="500" ID="4"/>
+          <Item2 Y="215" ID="2"/>
+          <Item3 Y="455" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="C:\lazarus\components\lazutils\fileutil.pas"/>
+        <UnitName Value="FileUtil"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="68"/>
+        <CursorPos X="10" Y="88"/>
+        <UsageCount Value="7"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="C:\lazarus\components\lazutils\fileutil.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="130"/>
+        <CursorPos X="3" Y="132"/>
+        <UsageCount Value="7"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\lazarus\components\lazutils\lazfileutils.pas"/>
+        <UnitName Value="LazFileUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="72"/>
+        <CursorPos X="10" Y="92"/>
+        <UsageCount Value="7"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\components\lazutils\winlazfileutils.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="16"/>
+        <UsageCount Value="7"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\Podlivka3\MyPFlas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <UsageCount Value="18"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\AdditionalModule\MyPas\MyPFlas.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="48" Y="7"/>
+        <UsageCount Value="21"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="147" Column="20" TopLine="129"/>
+      </Position1>
+      <Position2>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="289" Column="18" TopLine="256"/>
+      </Position2>
+      <Position3>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="296" Column="78" TopLine="263"/>
+      </Position3>
+      <Position4>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="315" Column="70" TopLine="282"/>
+      </Position4>
+      <Position5>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="322" Column="85" TopLine="289"/>
+      </Position5>
+      <Position6>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="330" Column="12" TopLine="297"/>
+      </Position6>
+      <Position7>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="335" Column="12" TopLine="302"/>
+      </Position7>
+      <Position8>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="390" Column="22" TopLine="357"/>
+      </Position8>
+      <Position9>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="409" Column="41" TopLine="376"/>
+      </Position9>
+      <Position10>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="433" Column="27" TopLine="400"/>
+      </Position10>
+      <Position11>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="444" Column="22" TopLine="411"/>
+      </Position11>
+      <Position12>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="446" Column="131" TopLine="413"/>
+      </Position12>
+      <Position13>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="448" Column="80" TopLine="415"/>
+      </Position13>
+      <Position14>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="178" Column="62" TopLine="144"/>
+      </Position14>
+      <Position15>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="138" Column="74" TopLine="119"/>
+      </Position15>
+      <Position16>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="219" Column="55" TopLine="202"/>
+      </Position16>
+      <Position17>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="194" Column="60" TopLine="174"/>
+      </Position17>
+      <Position18>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="42" Column="26" TopLine="24"/>
+      </Position18>
+      <Position19>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="41" Column="26" TopLine="23"/>
+      </Position19>
+      <Position20>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="773" Column="9" TopLine="623"/>
+      </Position20>
+      <Position21>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="424" Column="5" TopLine="408"/>
+      </Position21>
+      <Position22>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="485" Column="93" TopLine="465"/>
+      </Position22>
+      <Position23>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="488" Column="95" TopLine="468"/>
+      </Position23>
+      <Position24>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="457" TopLine="440"/>
+      </Position24>
+      <Position25>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="193" Column="10" TopLine="175"/>
+      </Position25>
+      <Position26>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="427" Column="67" TopLine="417"/>
+      </Position26>
+      <Position27>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="386" Column="19" TopLine="378"/>
+      </Position27>
+      <Position28>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="389" Column="30" TopLine="378"/>
+      </Position28>
+      <Position29>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="384" Column="24" TopLine="378"/>
+      </Position29>
+      <Position30>
+        <Filename Value="som_main.pas"/>
+        <Caret Line="386" Column="19" TopLine="378"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

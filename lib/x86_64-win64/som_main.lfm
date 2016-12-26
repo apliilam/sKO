@@ -1,0 +1,773 @@
+object som_mForm: Tsom_mForm
+  Left = 1185
+  Height = 799
+  Top = 126
+  Width = 680
+  AllowDropFiles = True
+  Caption = 'Stock Keyword Outsourcing 1.0'
+  ClientHeight = 799
+  ClientWidth = 680
+  Color = clSilver
+  KeyPreview = True
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '1.6.2.0'
+  object somGroupBox_Setting: TGroupBox
+    Left = 25
+    Height = 80
+    Top = 360
+    Width = 311
+    Caption = 'Preview setting'
+    ClientHeight = 60
+    ClientWidth = 307
+    TabOrder = 7
+    object somLabel_PreviewMaxSize: TLabel
+      Left = 16
+      Height = 15
+      Top = 4
+      Width = 209
+      Caption = 'превью            px по большей стороне'
+      ParentColor = False
+    end
+    object somEdit_PreviewMaxSize: TEdit
+      Left = 59
+      Height = 15
+      Top = 5
+      Width = 32
+      Alignment = taCenter
+      BorderStyle = bsNone
+      Color = clSilver
+      TabOrder = 0
+      Text = '9999'
+    end
+    object somLabel_Suffix: TLabel
+      Left = 16
+      Height = 15
+      Top = 24
+      Width = 119
+      Caption = 'суффикс для превью:'
+      ParentColor = False
+    end
+    object somEdit_Suffix: TEdit
+      Left = 141
+      Height = 15
+      Top = 24
+      Width = 88
+      BorderStyle = bsNone
+      Color = clSilver
+      TabOrder = 1
+      Text = '_prw'
+    end
+  end
+  object somGroupBox_Rename: TGroupBox
+    Left = 341
+    Height = 80
+    Top = 360
+    Width = 311
+    Caption = 'Переименовать Оригинал'
+    ClientHeight = 60
+    ClientWidth = 307
+    Color = clSilver
+    Font.Color = clBackground
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 6
+    object somCheckBox_PrwNameToOrig: TCheckBox
+      Left = 16
+      Height = 19
+      Top = 0
+      Width = 163
+      Caption = ' взять имя Превью-файла'
+      OnChange = somCheckBox_PrwNameToOrigChange
+      TabOrder = 0
+    end
+    object somCheckBox_PrwTitleToOrigName: TCheckBox
+      Left = 16
+      Height = 19
+      Top = 19
+      Width = 179
+      Caption = ' взять Title из Превью-файла'
+      OnChange = somCheckBox_PrwTitleToOrigNameChange
+      TabOrder = 1
+    end
+    object somEdit_Copyright: TEdit
+      Left = 77
+      Height = 15
+      Top = 40
+      Width = 227
+      BorderStyle = bsNone
+      Color = clSilver
+      Font.Color = clBackground
+      ParentFont = False
+      TabOrder = 2
+    end
+    object somLabel_Copyright: TLabel
+      Left = 16
+      Height = 15
+      Top = 40
+      Width = 54
+      Caption = 'copyright:'
+      Font.Color = clBackground
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object somProgressBar1: TProgressBar
+    Left = 26
+    Height = 10
+    Top = 487
+    Width = 626
+    Step = 1
+    TabOrder = 5
+    BarShowText = True
+  end
+  object somSpeedButton_CreatePreviewMode: TSpeedButton
+    Tag = 12345
+    Left = 24
+    Height = 32
+    Top = 8
+    Width = 312
+    Caption = 'создаем Превью'
+    OnClick = somSpeedButton_CreatePreviewModeClick
+    ParentFont = False
+  end
+  object somSpeedButton_CopyMetadataMode: TSpeedButton
+    Tag = 12345
+    Left = 341
+    Height = 32
+    Top = 8
+    Width = 311
+    Caption = 'переносим Метаданные'
+    OnClick = somSpeedButton_CopyMetadataModeClick
+    ParentFont = False
+  end
+  object somSpeedButton_Log: TSpeedButton
+    Left = 632
+    Height = 24
+    Top = 496
+    Width = 48
+    Caption = 'Log'
+    Flat = True
+    OnClick = somSpeedButton_LogClick
+  end
+  inline somSynEdit: TSynEdit
+    Left = 16
+    Height = 160
+    Top = 520
+    Width = 648
+    Color = clSilver
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    Font.Pitch = fpFixed
+    Font.Quality = fqNonAntialiased
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    TabStop = False
+    Gutter.AutoSize = False
+    Gutter.Color = cl3DDkShadow
+    Gutter.Visible = False
+    Gutter.Width = 20
+    Gutter.MouseActions = <>
+    RightGutter.Width = 0
+    RightGutter.MouseActions = <>
+    Highlighter = somSynAnySyn
+    Keystrokes = <    
+      item
+        Command = ecUp
+        ShortCut = 38
+      end    
+      item
+        Command = ecSelUp
+        ShortCut = 8230
+      end    
+      item
+        Command = ecScrollUp
+        ShortCut = 16422
+      end    
+      item
+        Command = ecDown
+        ShortCut = 40
+      end    
+      item
+        Command = ecSelDown
+        ShortCut = 8232
+      end    
+      item
+        Command = ecScrollDown
+        ShortCut = 16424
+      end    
+      item
+        Command = ecLeft
+        ShortCut = 37
+      end    
+      item
+        Command = ecSelLeft
+        ShortCut = 8229
+      end    
+      item
+        Command = ecWordLeft
+        ShortCut = 16421
+      end    
+      item
+        Command = ecSelWordLeft
+        ShortCut = 24613
+      end    
+      item
+        Command = ecRight
+        ShortCut = 39
+      end    
+      item
+        Command = ecSelRight
+        ShortCut = 8231
+      end    
+      item
+        Command = ecWordRight
+        ShortCut = 16423
+      end    
+      item
+        Command = ecSelWordRight
+        ShortCut = 24615
+      end    
+      item
+        Command = ecPageDown
+        ShortCut = 34
+      end    
+      item
+        Command = ecSelPageDown
+        ShortCut = 8226
+      end    
+      item
+        Command = ecPageBottom
+        ShortCut = 16418
+      end    
+      item
+        Command = ecSelPageBottom
+        ShortCut = 24610
+      end    
+      item
+        Command = ecPageUp
+        ShortCut = 33
+      end    
+      item
+        Command = ecSelPageUp
+        ShortCut = 8225
+      end    
+      item
+        Command = ecPageTop
+        ShortCut = 16417
+      end    
+      item
+        Command = ecSelPageTop
+        ShortCut = 24609
+      end    
+      item
+        Command = ecLineStart
+        ShortCut = 36
+      end    
+      item
+        Command = ecSelLineStart
+        ShortCut = 8228
+      end    
+      item
+        Command = ecEditorTop
+        ShortCut = 16420
+      end    
+      item
+        Command = ecSelEditorTop
+        ShortCut = 24612
+      end    
+      item
+        Command = ecLineEnd
+        ShortCut = 35
+      end    
+      item
+        Command = ecSelLineEnd
+        ShortCut = 8227
+      end    
+      item
+        Command = ecEditorBottom
+        ShortCut = 16419
+      end    
+      item
+        Command = ecSelEditorBottom
+        ShortCut = 24611
+      end    
+      item
+        Command = ecToggleMode
+        ShortCut = 45
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16429
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 8237
+      end    
+      item
+        Command = ecDeleteChar
+        ShortCut = 46
+      end    
+      item
+        Command = ecCut
+        ShortCut = 8238
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8200
+      end    
+      item
+        Command = ecDeleteLastWord
+        ShortCut = 16392
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 32776
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 40968
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 13
+      end    
+      item
+        Command = ecSelectAll
+        ShortCut = 16449
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16451
+      end    
+      item
+        Command = ecBlockIndent
+        ShortCut = 24649
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 16461
+      end    
+      item
+        Command = ecInsertLine
+        ShortCut = 16462
+      end    
+      item
+        Command = ecDeleteWord
+        ShortCut = 16468
+      end    
+      item
+        Command = ecBlockUnindent
+        ShortCut = 24661
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 16470
+      end    
+      item
+        Command = ecCut
+        ShortCut = 16472
+      end    
+      item
+        Command = ecDeleteLine
+        ShortCut = 16473
+      end    
+      item
+        Command = ecDeleteEOL
+        ShortCut = 24665
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 16474
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 24666
+      end    
+      item
+        Command = ecGotoMarker0
+        ShortCut = 16432
+      end    
+      item
+        Command = ecGotoMarker1
+        ShortCut = 16433
+      end    
+      item
+        Command = ecGotoMarker2
+        ShortCut = 16434
+      end    
+      item
+        Command = ecGotoMarker3
+        ShortCut = 16435
+      end    
+      item
+        Command = ecGotoMarker4
+        ShortCut = 16436
+      end    
+      item
+        Command = ecGotoMarker5
+        ShortCut = 16437
+      end    
+      item
+        Command = ecGotoMarker6
+        ShortCut = 16438
+      end    
+      item
+        Command = ecGotoMarker7
+        ShortCut = 16439
+      end    
+      item
+        Command = ecGotoMarker8
+        ShortCut = 16440
+      end    
+      item
+        Command = ecGotoMarker9
+        ShortCut = 16441
+      end    
+      item
+        Command = ecSetMarker0
+        ShortCut = 24624
+      end    
+      item
+        Command = ecSetMarker1
+        ShortCut = 24625
+      end    
+      item
+        Command = ecSetMarker2
+        ShortCut = 24626
+      end    
+      item
+        Command = ecSetMarker3
+        ShortCut = 24627
+      end    
+      item
+        Command = ecSetMarker4
+        ShortCut = 24628
+      end    
+      item
+        Command = ecSetMarker5
+        ShortCut = 24629
+      end    
+      item
+        Command = ecSetMarker6
+        ShortCut = 24630
+      end    
+      item
+        Command = ecSetMarker7
+        ShortCut = 24631
+      end    
+      item
+        Command = ecSetMarker8
+        ShortCut = 24632
+      end    
+      item
+        Command = ecSetMarker9
+        ShortCut = 24633
+      end    
+      item
+        Command = EcFoldLevel1
+        ShortCut = 41009
+      end    
+      item
+        Command = EcFoldLevel2
+        ShortCut = 41010
+      end    
+      item
+        Command = EcFoldLevel3
+        ShortCut = 41011
+      end    
+      item
+        Command = EcFoldLevel4
+        ShortCut = 41012
+      end    
+      item
+        Command = EcFoldLevel5
+        ShortCut = 41013
+      end    
+      item
+        Command = EcFoldLevel6
+        ShortCut = 41014
+      end    
+      item
+        Command = EcFoldLevel7
+        ShortCut = 41015
+      end    
+      item
+        Command = EcFoldLevel8
+        ShortCut = 41016
+      end    
+      item
+        Command = EcFoldLevel9
+        ShortCut = 41017
+      end    
+      item
+        Command = EcFoldLevel0
+        ShortCut = 41008
+      end    
+      item
+        Command = EcFoldCurrent
+        ShortCut = 41005
+      end    
+      item
+        Command = EcUnFoldCurrent
+        ShortCut = 41003
+      end    
+      item
+        Command = EcToggleMarkupWord
+        ShortCut = 32845
+      end    
+      item
+        Command = ecNormalSelect
+        ShortCut = 24654
+      end    
+      item
+        Command = ecColumnSelect
+        ShortCut = 24643
+      end    
+      item
+        Command = ecLineSelect
+        ShortCut = 24652
+      end    
+      item
+        Command = ecTab
+        ShortCut = 9
+      end    
+      item
+        Command = ecShiftTab
+        ShortCut = 8201
+      end    
+      item
+        Command = ecMatchBracket
+        ShortCut = 24642
+      end    
+      item
+        Command = ecColSelUp
+        ShortCut = 40998
+      end    
+      item
+        Command = ecColSelDown
+        ShortCut = 41000
+      end    
+      item
+        Command = ecColSelLeft
+        ShortCut = 40997
+      end    
+      item
+        Command = ecColSelRight
+        ShortCut = 40999
+      end    
+      item
+        Command = ecColSelPageDown
+        ShortCut = 40994
+      end    
+      item
+        Command = ecColSelPageBottom
+        ShortCut = 57378
+      end    
+      item
+        Command = ecColSelPageUp
+        ShortCut = 40993
+      end    
+      item
+        Command = ecColSelPageTop
+        ShortCut = 57377
+      end    
+      item
+        Command = ecColSelLineStart
+        ShortCut = 40996
+      end    
+      item
+        Command = ecColSelLineEnd
+        ShortCut = 40995
+      end    
+      item
+        Command = ecColSelEditorTop
+        ShortCut = 57380
+      end    
+      item
+        Command = ecColSelEditorBottom
+        ShortCut = 57379
+      end>
+    MouseActions = <>
+    MouseTextActions = <>
+    MouseSelActions = <>
+    VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    ScrollBars = ssAutoBoth
+    SelectedColor.Background = clRed
+    SelectedColor.BackPriority = 50
+    SelectedColor.ForePriority = 50
+    SelectedColor.FramePriority = 50
+    SelectedColor.BoldPriority = 50
+    SelectedColor.ItalicPriority = 50
+    SelectedColor.UnderlinePriority = 50
+    SelectedColor.StrikeOutPriority = 50
+    BracketHighlightStyle = sbhsBoth
+    BracketMatchColor.Background = clNone
+    BracketMatchColor.Foreground = clNone
+    BracketMatchColor.Style = [fsBold]
+    FoldedCodeColor.Background = clNone
+    FoldedCodeColor.Foreground = clGray
+    FoldedCodeColor.FrameColor = clGray
+    MouseLinkColor.Background = clNone
+    MouseLinkColor.Foreground = clBlue
+    LineHighlightColor.Background = clNone
+    LineHighlightColor.Foreground = clNone
+    inline SynLeftGutterPartList1: TSynGutterPartList
+      object SynGutterLineNumber1: TSynGutterLineNumber
+        Width = 17
+        MouseActions = <>
+        MarkupInfo.Background = clBtnFace
+        MarkupInfo.Foreground = clNone
+        DigitCount = 2
+        ShowOnlyLineNumbersMultiplesOf = 1
+        ZeroStart = False
+        LeadingZeros = False
+      end
+    end
+  end
+  object somLabel_FilesCount: TLabel
+    Left = 114
+    Height = 15
+    Top = 341
+    Width = 14
+    Caption = '(0)'
+    ParentColor = False
+  end
+  object somSpeedButton_AddFiles: TSpeedButton
+    Left = 34
+    Height = 24
+    Top = 336
+    Width = 72
+    Caption = 'Добавить'
+    OnClick = somSpeedButton_AddFilesClick
+  end
+  object somSpeedButton_DeleteFile: TSpeedButton
+    Left = 438
+    Height = 24
+    Top = 336
+    Width = 72
+    Caption = 'Удалить'
+    OnClick = somSpeedButton_DeleteFileClick
+  end
+  object somSpeedButton_ClearFiles: TSpeedButton
+    Left = 509
+    Height = 24
+    Top = 336
+    Width = 136
+    Caption = 'Очистить'
+    Color = clHotLight
+    OnClick = somSpeedButton_ClearFilesClick
+  end
+  object somEdit_FromPreviewFolder: TEdit
+    Left = 25
+    Height = 17
+    Hint = 'Папка для превью от кейвордиста'
+    Top = 99
+    Width = 628
+    HelpType = htKeyword
+    HelpKeyword = 'pathName'
+    BorderStyle = bsNone
+    Color = clSilver
+    Font.Height = 17
+    ParentFont = False
+    TabOrder = 1
+    TextHint = 'откуда брать заполненные превью'
+  end
+  object somEdit_ToPreviewFolder: TEdit
+    Left = 25
+    Height = 17
+    Hint = 'Папка для изготовления превью'
+    Top = 79
+    Width = 628
+    HelpType = htKeyword
+    HelpKeyword = 'pathName'
+    BorderStyle = bsNone
+    Color = clSilver
+    Font.Height = 17
+    ParentFont = False
+    TabOrder = 2
+    TextHint = 'куда делать превью'
+  end
+  object somEdit_OriginalFolder: TEdit
+    Left = 25
+    Height = 17
+    Hint = 'Папка для оригинальных файлов'
+    Top = 59
+    Width = 628
+    HelpType = htKeyword
+    HelpKeyword = 'pathName'
+    BorderStyle = bsNone
+    Color = clSilver
+    Font.Height = 17
+    ParentFont = False
+    TabOrder = 3
+    TextHint = 'где оригинальные файлы'
+  end
+  object somListBox_Files: TListBox
+    Left = 25
+    Height = 208
+    Top = 123
+    Width = 628
+    Color = clSilver
+    DragMode = dmAutomatic
+    ItemHeight = 0
+    OnDrawItem = somListBox_FilesDrawItem
+    ParentShowHint = False
+    ParentFont = False
+    ShowHint = True
+    Style = lbOwnerDrawFixed
+    TabOrder = 4
+  end
+  object somSpeedButton_Do: TSpeedButton
+    Left = 25
+    Height = 40
+    Top = 448
+    Width = 628
+    Caption = 'АРБАЙТЭН'
+    Font.Color = clRed
+    OnClick = somSpeedButton_DoClick
+    ShowHint = True
+    ParentBidiMode = False
+    ParentFont = False
+    ParentShowHint = False
+  end
+  object somSynAnySyn: TSynAnySyn
+    Enabled = False
+    Comments = []
+    DetectPreprocessor = False
+    IdentifierChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz'
+    KeyAttri.Foreground = clRed
+    KeyAttri.Style = []
+    ConstantAttri.Foreground = clGreen
+    ConstantAttri.Style = []
+    KeyWords.Strings = (
+      'CMDLINE_NOT_COMPLITE'
+      'DATA_NOT_COPYED'
+      'FILE_NOT_ADDED'
+      'FILE_NOT_FOUND'
+      'FILE_NOT_RENAMED'
+      'PREVIEW_NOT_CREATED'
+    )
+    Constants.Strings = (
+      'DATA_COPYED'
+      'FILE_ADDED'
+      'FILE_FOUND'
+      'FILE_RENAMED'
+      'PREVIEW_CREATED'
+    )
+    Markup = False
+    Entity = False
+    DollarVariables = False
+    ActiveDot = False
+    left = 48
+    top = 704
+  end
+end
